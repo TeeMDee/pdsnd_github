@@ -7,7 +7,7 @@ Tue jan 5, 2022 21:46:05
 Explore US Bikeshare Data
 
 ### Description
-Describe what your project is about and what it does
+This project is all about making use of Python codes to explore data related to bike share for three major cities in the United States (Chicago, Washington and New York City) with an interactive question and answer expression on Git command line
 
 ### Files used
 Include the files used
