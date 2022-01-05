@@ -10,7 +10,10 @@ Explore US Bikeshare Data
 This project is all about making use of Python codes to explore data related to bike share for three major cities in the United States (Chicago, Washington and New York City) with an interactive question and answer expression on Git command line
 
 ### Files used
-Include the files used
+chicago.csv
+washington.csv
+new_york_city.csv
+
 
 ### Credits
 It's important to give proper credit. Add links to any repo that inspired you or blogposts you consulted.
