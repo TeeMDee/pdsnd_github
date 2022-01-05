@@ -21,7 +21,8 @@ def get_filters():
 
     print('Hello!\n')
     print("I'm Temidayo!!!\n")
-
+    #Initializing an empty city variable to store city choice from user
+    #You will see this repeat throughout the program
     print('Let\'s explore some US bikeshare data together!\n')
 
     # get user input for city (chicago, new york city, washington). HINT: Use a while loop to handle invalid inputs
@@ -214,7 +215,8 @@ def display_data(df):
     Returns:
         None.
     """
-
+    #counter variable is initialized as a tag to ensure only details from
+    #a particular point is displayed
     loc = 0
     print("\n would you like to view 5 rows of raw data? Enter yes or no")
     while True:
@@ -222,6 +224,8 @@ def display_data(df):
         if  rdata == 'yes':
             print(df.iloc[loc:loc + 5])
             loc += 5
+
+            #If user opts for it, this displays next 5 rows of data
         
             print("\n would you like to view the next 5 rows of raw data?")
             continue
