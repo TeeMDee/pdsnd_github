@@ -2,11 +2,12 @@ import time
 import pandas as pd
 import numpy as np
 
+#Creating a dictionary containing the data sources for the three cities
 CITY_DATA = { 'chicago': 'chicago.csv',
               'new york city': 'new_york_city.csv',
               'washington': 'washington.csv' }
 
-
+#Function to figure out the filtering requirements of the user
 global day, month
 def get_filters():
     """
@@ -69,7 +70,7 @@ def get_filters():
 
     return city, month, day
 
-  
+#Function to load data from .csv files
 def load_data(city, month, day):
     """
     Loads data for the specified city and filters by month and day if applicable.
@@ -110,7 +111,7 @@ def load_data(city, month, day):
 
     return df
 
-
+#Function to calculate all the time-related statistics for the chosen data
 def time_stats(df):
     """Displays statistics on the most frequent times of travel."""
 
@@ -134,7 +135,7 @@ def time_stats(df):
     print("\nThis took %s seconds." % (time.time() - start_time))
     print('-'*40)
 
-
+#Function to calculate station related statistics
 def station_stats(df):
     """Displays statistics on the most popular stations and trip."""
 
@@ -154,7 +155,7 @@ def station_stats(df):
     print("\nThis took %s seconds." % (time.time() - start_time))
     print('-'*40)
 
-
+#Function for trip duration related statistics
 def trip_duration_stats(df):
     """Displays statistics on the total and average trip duration."""
 
@@ -170,7 +171,7 @@ def trip_duration_stats(df):
     print("\nThis took %s seconds." % (time.time() - start_time))
     print('-'*40)
 
-
+#Function to calculate user statistics
 def user_stats(df):
     """Displays statistics on bikeshare users."""
 
@@ -202,6 +203,7 @@ def user_stats(df):
 
     print('-'*40)
 
+#Function to display the data frame itself as per user request
 pd.set_option('display.max_columns', 200)
 def display_data(df):
     """Displays 5 rows of data from the csv file for the selected city.
@@ -226,7 +228,7 @@ def display_data(df):
         else:
             break    
 
-
+#Main function to call all the previous functions
 def main():
     while True:
         city, month, day = get_filters()
